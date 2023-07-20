@@ -12,3 +12,6 @@ jobs:
     steps:
       - name: curl
         run: curl -X POST '${{ secrets.DEPLOY_HOOK_URL }}'
+
+schedule:
+  - cron: '0 9 * * 1' # 9am (Mon) UTC
